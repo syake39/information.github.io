@@ -1,0 +1,121 @@
+/* 基本スタイル */
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000;
+    font-weight: 300;
+}
+
+/* フォームの各ページ（セクション）の表示・非表示を制御 */
+.page {
+    display: none; /* 基本は非表示 */
+}
+.page.active {
+    display: block; /* activeクラスが付いたページのみ表示 */
+}
+
+
+/* フォームスタイル */
+.form-group, .confirmation-group {
+    margin-bottom: 20px;
+}
+
+label, .confirmation-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.required {
+    color: #000;
+    font-weight: normal;
+    padding-left: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* paddingを含めて幅を100%にする */
+}
+
+textarea {
+    resize: vertical; /* 縦方向のみリサイズ可能に */
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+button {
+    padding: 12px 25px;
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+#back-button {
+    background-color: #fff;
+    color: #000;
+    margin-right: 10px;
+}
+
+#back-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* 確認画面スタイル */
+.confirmation-data {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #eee;
+    min-height: 20px;
+    white-space: pre-wrap; /* 改行をそのまま表示 */
+    word-wrap: break-word;
+}
+
+/* サンクスページスタイル */
+p {
+    text-align: center;
+    line-height: 1.8;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+    cursor: pointer;
+}
+
