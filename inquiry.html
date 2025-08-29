@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資料請求フォーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 入力ページ -->
+    <div id="page-input" class="container page active">
+        <h1>資料請求</h1>
+        <form id="inquiry-form">
+            <div class="form-group">
+                <label for="name">お名前 <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">メールアドレス <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">お問い合わせ内容</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+            </div>
+            <div class="form-actions">
+                <button type="button" id="confirm-button">入力内容を確認する</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- 確認ページ -->
+    <div id="page-confirm" class="container page">
+        <h1>入力内容の確認</h1>
+        <div class="confirmation-group">
+            <p class="confirmation-label">お名前</p>
+            <p class="confirmation-data" id="confirm-name"></p>
+        </div>
+        <div class="confirmation-group">
+            <p class="confirmation-label">メールアドレス</p>
+            <p class="confirmation-data" id="confirm-email"></p>
+        </div>
+        <div class="confirmation-group">
+            <p class="confirmation-label">お問い合わせ内容</p>
+            <p class="confirmation-data" id="confirm-message"></p>
+        </div>
+        <div class="form-actions">
+            <button type="button" id="back-button">修正する</button>
+            <button type="button" id="submit-button">送信する</button>
+        </div>
+    </div>
+
+    <!-- 完了ページ -->
+    <div id="page-thanks" class="container page">
+        <h1>資料請求が完了しました</h1>
+        <p>お問い合わせいただき、誠にありがとうございます。</p>
+        <p>ご入力いただいたメールアドレス宛に、確認のメールをお送りいたしました。</p>
+        <div class="form-actions">
+            <a href="#" id="back-to-top" class="back-link">フォームのトップに戻る</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
